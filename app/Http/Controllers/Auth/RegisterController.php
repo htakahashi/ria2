@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Mail\UserCreated;
+use App\Mail\Welcome;
+use App\Mail\AdvanceRequest;
+use App\Mail\AdminRequest;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -28,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/courses';
 
     /**
      * Create a new controller instance.
@@ -49,9 +53,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'first_name' => 'required|max:255',
+            'last_name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|min:6|confirmed',
+            'background_image' => 'required',
+            'description' => 'required|min:100',
         ]);
     }
 
@@ -59,14 +66,33 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return User
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+
+        $user = User::create([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'user_type' => $data['user_type'],
+            'user_image' => 'user_sky.jpg',
+            'background_image' => $data['background_image'],
+            'password' => bcrypt($data['password']),
+            'description' => $data['description'],
         ]);
+        
+
+        if ($data['user_type'] === 'request_advance'){
+            Mail::to('jeremyashby25@gmail.com')->send(new AdvanceRequest($user));
+        }
+        if ($data['user_type'] === 'request_basic_admin'){
+            Mail::to('jeremyashby25@gmail.com')->send(new AdminRequest($user));
+        }
+        Mail::to($user)->send(new Welcome($user));
+        Mail::to('jeremyashby25@gmail.com')->send(new UserCreated($user));
+
+        return $user;
+
     }
 }
