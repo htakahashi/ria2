@@ -1,11 +1,11 @@
 @extends('layouts.master')
 @section('content')
                 <div class="title m-b-md">
-                    Welcome to the Airheads Stash!
+                    Hello, Customer!
                 </div>
 
                 <div class="links">
-
+                    <a href="products">View Products</a>
                 </div>
             </div>
         </div>
