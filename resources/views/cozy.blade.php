@@ -1,6 +1,12 @@
 @extends('template.template')
 
 @section('content')
+@hasrole('admin')
+	<p>you are an admin! </p>
+@else
+<p>you are not an admin!</p>
+@endhasrole
+
 <h2>What is Quilting?</h2>
 		<p>Quilting is sewing technique in which two layers of fabric, usually with an insulating interior layer, are sewn together with multiple rows of stitching.</p>
 	

@@ -13,11 +13,31 @@ class DemoController extends Controller
 {
     
     protected $guard_name = 'web';
-    function testThings() {
-        dd(User::find(6));
+    
+    function process() {
+        return redirect('/users');
     }
+
+    function assignUsers() {
+      $users = User::where('permission_id', 2)->get();
+    //   dd($users);
+      if(!empty($users)){
+      foreach($users as $user){
+        $user->assignRole('admin');
+
+        $user->permission_id = 1;
+        $user->save();
+         
+      }
+      return redirect('/orders');
+    }// end of if statement
+
+   
+   
+    }
+    
     function createWriter () {
-        // dd('createWriter');
+        //dd('createWriter');
         $role = Role::create(['name' => 'admin']);
         $permission = Permission::create(['name' => 'change shipping status']);
 
@@ -39,8 +59,8 @@ class DemoController extends Controller
     }
 
     function demo () {
-        $user = User::find(6);
-        // dd($user);
+        $user = User::find(18);
+        dd($user);
 
         if( $user->hasPermissionTo('edit articles') ) {
             dump('user has permission to edit articles');

@@ -3,7 +3,14 @@
 @section('content')
 
 <div class="row">
-  
+
+<div class="alert alert-danger">
+        <ul>
+            <p>There has been an error processing your card!! Please Try again!</p>
+        </ul>
+    </div>
+
+
         <div class="col-sm-12">
                 <h2>Checkout:</h2>
         </div>
@@ -18,22 +25,22 @@
         </thead>
         <tbody>
             <tr>
-                <td>{{$cart->prod_name}}</td>
+                <td>{{$error->prod_name}}</td>
                 <td></td>
                 <td></td>
-                <td>${{$cart->prod_price}}</td>
+                <td>${{$error->prod_price}}</td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td>Tax:</td>
-                <td>$ {{$cart->tax}}0</td>
+                <td>$ {{$error->tax}}0</td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td>Total:</td>
-                <td>$ {{$cart->prod_price + $cart->tax}}</td>
+                <td>$ {{$error->prod_price + $error->tax}}</td>
             </tr>
         </tbody>
     </table>
@@ -166,9 +173,9 @@
             </label>
             </div>
         </div>
-        <?php $product = $cart->prod_name; ?>
+       <?php $product = $error->prod_name; ?>
         <input type="hidden" name="product" value="{{$product}}">
-        <input type="hidden" name="id" value="{{$cart->id}}">
+        <input type="hidden" name="id" value="{{$error->id}}">
         <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
         <div class="col-sm-12">

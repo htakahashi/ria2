@@ -14,7 +14,11 @@ class ShippingController extends Controller
      */
     public function index()
     {
-        //
+        
+        $items =  Shipping::All();
+
+        return view('products.orderList', compact('items'));
+
     }
 
     /**
@@ -36,7 +40,13 @@ class ShippingController extends Controller
     public function store(Request $request)
     {
         $shipping = new Shipping;
-
+        
+        $cardValidation  = request('creditcard');
+        $id = request('id'); 
+        if($cardValidation === "4111 1111 1111 1111"){
+            return redirect()->action('ProductsListController@error', [$id]);
+        }
+        elseif($cardValidation === "5105 1051 0510 5100"){
         $shipping->name = request('name');
         $shipping->email = request('email');
         $shipping->address = request('address');
@@ -53,6 +63,11 @@ class ShippingController extends Controller
         $shipping->save();
         $id = request('id');
         return redirect()->action('ProductsListController@thanksPage', [$id]);
+        }
+        else{
+            return redirect('/cozy');
+        }
+        
     }
 
     /**

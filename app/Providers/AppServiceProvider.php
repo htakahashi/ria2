@@ -3,9 +3,14 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
+use App\User;
 
 class AppServiceProvider extends ServiceProvider
 {
+    protected $guard_name = 'web';
     /**
      * Bootstrap any application services.
      *
@@ -13,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        
     }
 
     /**
@@ -23,6 +28,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+       //
     }
 }

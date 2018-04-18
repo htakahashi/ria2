@@ -67,7 +67,12 @@ class ProductsListController extends Controller
     {        
         return view('thanks', compact('thanks'));
     }
-
+    
+    public function error(productsList $error)
+    {    
+        
+        return view('products.error', compact('error'));
+    }
 
     /**
      * Show the form for editing the specified resource.

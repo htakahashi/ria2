@@ -1,12 +1,14 @@
 <nav  class="myMenu">
 		<ul class="primary-nav">
 		<li class="active"><a href="/cozy">Home</a></li>
-		<li class="about"><a>About</a></li>
+		<li class="/welcome"><a>User</a></li>
 		<li><a>Contact Us</a></li>	
 
 		<li class=""><a href="/cart"> Patterns	</a></li>
+		
+			  <li> <a href="/orders">Orders</a></li>
 		@if (Route::has('login'))
-              
+			  
                     @auth
                        <li> <a href="{{ url('logout') }}">Logout</a></li>
                     @else
@@ -14,7 +16,9 @@
 					<li class="last"><a href="{{ route('register') }}">Register</a></li>
                     @endauth
                
-            @endif
+			@endif
+			
+		
 		<button class="nav-button">Toggle Navigation</button>
 		</ul>
 			

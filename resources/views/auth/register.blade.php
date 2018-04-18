@@ -66,11 +66,11 @@
                             </div> 
                             <div class="col-md-4 float-sm-right">
                                 <label for="permission-level" >Admin</label>
-                                <input type='radio' name="admin" value='admin' >
+                                <input type='radio' name="user" value='2' >
                             </div> 
                             <div class="col-md-4 float-sm-right">
                                 <label for="permission-level" >User</label>
-                                <input type='radio' name="user" value='user' >
+                                <input type='radio' name="user" value='1' >
                             </div>
                         </div>
 /
