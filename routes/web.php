@@ -19,12 +19,16 @@ Route::get('/', function () {
 Route::get('/cozy', function () {
     return view('cozy');
 });
-
+Route::get('/home', function () {
+    return view('cozy');
+});
 
 Route::get('/cart', 'ProductsListController@index');
 Route::get('/cart/{item}', 'ProductsListController@show');
 Route::get('/products/{cart}', 'ProductsListController@showCart');
 Route::get('/thanks/{thanks}', 'ProductsListController@thanksPage');
+Route::get('/auth/permissions', 'DemoController@demo');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::post('/products', 'ShippingController@store');
 
