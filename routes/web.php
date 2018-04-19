@@ -12,5 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('store');
+});
+
+Route::get('/generic', function () {
+    return view('generic');
+});
+
+Route::get('/elements', function () {
+    return view('elements');
 });
