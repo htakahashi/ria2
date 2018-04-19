@@ -1,0 +1,17 @@
+// Variables
+$font-heading:'Raleway', sans-serif;
+$font-body:'Open Sans', sans-serif;
+$darkgrey: #828C86;
+$lightgrey: #ddd;
+$paleYellow: #f1cd77;
+$darkBlue: #46819b;
+$lightBlue: #8fd7f1;
+$pink: #f477b3;
+
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}

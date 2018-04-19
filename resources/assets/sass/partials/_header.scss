@@ -1,0 +1,40 @@
+// Header SCSS
+body{
+		background-image:url(../img/light_wool_@2X.png);
+		font-family: $font-body;
+
+	}
+#header {
+	width: 940px;
+    nav {
+    	float: right;
+		width: 43%;
+		margin: 2% 0;
+
+
+    	li {
+			color: $darkBlue;
+
+    		float: right;
+			list-style-type: none;
+			padding: .3em 2%;
+			margin-top: 2%;
+			border-right: 1px solid $darkBlue;
+    	
+		
+			}	// end of li header menu
+		li.active{ 
+				color: $darkgrey;
+				border-bottom: 2px solid $darkgrey;
+		}// end of li:active
+		li:hover {
+				color: $darkgrey;
+				border-bottom: 2px solid $darkgrey;
+			}// end of li hover header menu 
+		.last{
+			border: none;
+			
+		}// end of .last class header menu 
+	}// end of nav header menu
+}// #header
+

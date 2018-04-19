@@ -1,0 +1,19 @@
+// Main SCSS, there should be no CSS in this page!
+
+@import 'pages/reset.scss';
+
+@import 'pages/mobile-menu.scss';
+// Global Specificity
+@import 'partials/variables.scss';
+
+
+
+// Page Specificity
+@import 'pages/phone.scss';
+
+// Page Specificity
+@import 'pages/tablet.scss';
+
+// Page Specificity
+@import 'pages/desktop.scss';
+

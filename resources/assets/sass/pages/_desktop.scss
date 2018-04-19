@@ -1,0 +1,281 @@
+/* Desktop Styling */
+@media only screen and (min-width: 960px) {
+// Home Page SCSS
+.wrapper{
+	width: 940px + 60px;
+	margin: 0 auto;
+	background: $lightgrey;
+
+.container{
+		margin: auto;
+	
+		}//end of container
+	}//end of wrapper
+
+	.icons{
+		width: 16%;
+	}
+	.searchbox{
+		//margin-top: -.8em;
+		display: none;
+		z-index: 1;
+		
+
+input.search{
+//margin: 4em 1em 0 1em;
+	//text-align: center;
+	
+}
+	} // end of searchbox
+	
+	.searchbox-desk{
+		display: inline-block;
+		float: right;
+		
+		input.search{
+			float: right;
+		}
+	}
+	
+	h1, h2{
+		font-family: $font-heading;
+		letter-spacing: .1em;
+	} // end of h1, h2 styling
+
+	h1 {
+		color: $darkBlue;	
+		width: 40%;
+		font-size: 2.2em;
+		margin: 0 4% 2% 2%;
+		display: inline-block;
+		
+		
+		
+	}// end of h1 content
+	.heading{
+		font-size: 3em;
+		position: absolute;
+		top: 18px;
+	}
+	h3{
+	width: 40%;
+	margin: 0 4% 3em 10%;
+	}
+	.logo{
+		display: inline-block;
+		width: 100px;
+		padding: .5em;
+	}
+	
+	
+	
+#home-page {
+	
+	
+ .heroimage{
+	margin: auto;
+	width: 940px;
+	height: 240px;
+	overflow: hidden;
+	border: 1px solid $darkgrey;
+	 clear: both;
+	
+	 img{
+		 width: 100%;
+		 height: auto;
+	 }// end of img
+	 
+	}// end of .heroimage div
+	
+		h2{
+		
+		margin: 2% 3%;
+		font-size: 1.6em;
+		color: #828C86;
+		border-bottom: 1px solid #828C86;
+		}
+	
+	
+	.row{
+		padding: 1000px / 24px - 19px;
+				//margin: 2em 1em 0 1.7em;
+				@include border-radius(6px);
+		.column{
+			width: 100%;
+			img{
+				width: 24%;
+				padding: 1000px / 24px - 19px;
+				//margin: 2em 1em 0 1.7em;
+				@include border-radius(6px);
+			}// end img styling
+
+			
+		}// end .column div
+		.column1{
+			width: 46%;
+			float: left;
+			padding: 1em;
+		}
+	}// end .row div
+
+}// #home-page
+
+// Header SCSS
+body{
+		background-image:url(../img/light_wool_@2X.png);
+		font-family: $font-body;
+
+	}
+#header {
+	width: 940px;
+	background-image: none;
+    nav {
+		
+    	float: right;
+		//position: absolute;
+		//right: -30px; 
+		width: 40%;
+		z-index: 200;
+		//margin-bottom: 3.5em;
+		li:last-child{
+			border-right: non
+		}
+		
+    	li {
+			border-right: 1px solid $darkBlue;
+
+			a{
+			
+			color: $darkBlue;
+			text-decoration: none;
+    		float: left;
+			list-style-type: none;
+			padding: .3em 2%;
+			margin-top: 2%;
+			border-bottom: 3px solid transparent;
+
+			}
+			ul{
+				z-index: 9999;
+				position: absolute;
+				left: -999em;
+				width: 10em;
+				height: 50px;
+				background-color: transparent;
+				border-bottom: 3px solid transparent;
+				
+				li {
+					position: relative;
+					background-color: white;
+					border-right: none;
+					a{
+					display: block;
+					float: none;
+					border-right: none;
+					border-bottom: 1px solid $darkBlue;
+					text-align: center;
+					padding: .4em;
+				}
+				}
+			}
+			
+			
+	
+			}	// end of li header menu
+		li:hover ul{
+
+			left: auto;
+			margin-top: 30px;
+			margin-left: -10px;
+			//border: none;
+			
+			li{
+				padding: 0em;
+
+				
+			}
+		}
+		
+		li ul li a:hover{
+			color: White;
+			background-color: $darkBlue;
+		}
+		li ul li.current-menu-item a{
+			color: White;
+			background-color: $darkBlue;
+		}
+		li.current-menu-item a{ 
+				color: $darkgrey;
+				border-bottom: 2px solid $darkgrey;
+			background-color: transparent;
+		}// end of li:active
+		
+		li:hover {
+				
+			background-color: transparent;
+		
+			}// end of li hover header menu 
+		li:hover a{
+			color: $darkgrey;
+			border-bottom: 2px solid $darkgrey;
+		}
+		.last{
+			border: none;
+			
+		}// end of .last class header menu 
+	
+	}// end of nav header menu
+
+}// #header
+	
+	#header nav.myMenu{
+		width: 60%;
+		
+		ul{
+			float: right;
+			text-align: right;
+			li{
+				float: left;
+				text-align: right;
+				padding: .5em;
+			}
+		}
+	}
+	.myMap{
+		height: 500px;
+	}
+	
+	// photo styling
+	.photo25{
+	width: 23%;
+	}
+	
+		.multicol3{
+	-webkit-column-count: 3; /*chrome, safari operea */
+	-moz-column-count: 3;
+	column-count: 3;
+	}
+	#footer{
+	background-color: $darkBlue;
+	
+	p{
+		text-align: center;
+		padding: .3em;
+		margin:0;
+		color: white;
+	}
+	a{
+		text-align: center;
+		color: white;
+		text-decoration: none;
+		padding: 0;
+		margin: 0;
+	}
+		a:hover{
+			border-bottom: 1px solid white;
+		}
+}
+.clearFix{
+	clear: both;
+}
+}

@@ -1,0 +1,37 @@
+	#footer{
+		nav{
+			margin: auto;
+			width: 31%;
+		
+				li{
+					float: left;
+					list-style-type: none;
+					padding: .3em .5em;
+					border-right: 1px solid $darkgrey;
+					margin: 3em 0 1.5em 0;
+					border-right: 1px solid $darkBlue;
+					color: $darkBlue;
+					
+				
+			a{
+			text-decoration: none;
+			color: $darkBlue;
+		}// end of anchor
+					}// end of list items in nav
+			li.current-list-item{
+			
+				color: $darkgrey;
+				border-bottom: 2px solid $darkgrey;
+				
+			}// end of li current-list-item
+			li:hover{
+				color: $darkgrey;
+
+				border-bottom: 2px solid $darkgrey;
+			}// end of li hover
+			.last{
+				border: none;
+			}// end of .last class
+			
+		}// end of nav tag
+	}// end of #footer id
