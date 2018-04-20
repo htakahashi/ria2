@@ -9,8 +9,14 @@
 		<title>Phantom by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Scripts -->
+		<script src="{{ asset('js/app.js') }}" defer></script>
+
 		<!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 		<link rel="stylesheet" href="/css/main.css" />
+
 		<!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
 	</head>
@@ -23,7 +29,7 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="/" class="logo">
 									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
 								</a>
 
@@ -40,7 +46,24 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<h2>Menu</h2>
-						<ul>
+
+						<ul class="navbar-nav ml-auto">
+							@if (Route::has('login'))
+								@auth
+									<li class="nav-item dropdown"><a class="dropdown-item" href="/"
+										 onclick="event.preventDefault();
+																	 document.getElementById('logout-form').submit();">
+											{{ __('Logout') }}
+									</a>
+
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+											@csrf
+									</form></li>
+										@else
+											<li><a href="{{ route('login') }}">Login</a>&nbsp;|&nbsp;
+											<a href="{{ route('register') }}">Register</a></li>
+										@endauth
+							@endif
 							<li><a href="/">Home</a></li>
 							<li><a href="/generic">Ipsum veroeros</a></li>
 							<li><a href="/generic">Tempus etiam</a></li>
@@ -85,7 +108,7 @@
 								</ul>
 							</section>
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Landon Call. All rights reserved</li>
 							</ul>
 						</div>
 					</footer>
