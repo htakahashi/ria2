@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-
-use App\productsList;
-
-class ProductsListController extends Controller
+use App\Shipping;
+class ShippingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +14,7 @@ class ProductsListController extends Controller
      */
     public function index()
     {
-        $products_lists =  productsList::All();
-
-        return view('cart', compact('products_lists'));
-
+        //
     }
 
     /**
@@ -40,42 +35,44 @@ class ProductsListController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $shipping = new Shipping;
+
+        $shipping->name = request('name');
+        $shipping->email = request('email');
+        $shipping->address = request('address');
+        $shipping->address2 = request('address2');
+        $shipping->city = request('city');
+        $shipping->state = request('State');
+        $shipping->zip = request('zip');
+        $shipping->creditCard = request('creditcard');
+        $shipping->expiration = request('expiration');
+        $shipping->ccv = request('ccv');
+        $shipping->fullfilled = 1;
+        $shipping->product = request('product');
+
+        $shipping->save();
+        $id = request('id');
+        return redirect()->action('ProductsListController@thanksPage', [$id]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\productsList  $productsList
+     * @param  \App\Shipping  $shipping
      * @return \Illuminate\Http\Response
      */
-    public function show(productsList $item)
+    public function show(Shipping $shipping)
     {
-     
-        return view('products.show', compact('item'));
-
+        //
     }
-
-    public function showCart(productsList $cart)
-    {
-       
-        return view('products.checkout', compact('cart'));
-
-    }
-
-    public function thanksPage(productsList $thanks)
-    {        
-        return view('thanks', compact('thanks'));
-    }
-
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\productsList  $productsList
+     * @param  \App\Shipping  $shipping
      * @return \Illuminate\Http\Response
      */
-    public function edit(productsList $productsList)
+    public function edit(Shipping $shipping)
     {
         //
     }
@@ -84,10 +81,10 @@ class ProductsListController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\productsList  $productsList
+     * @param  \App\Shipping  $shipping
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, productsList $productsList)
+    public function update(Request $request, Shipping $shipping)
     {
         //
     }
@@ -95,10 +92,10 @@ class ProductsListController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\productsList  $productsList
+     * @param  \App\Shipping  $shipping
      * @return \Illuminate\Http\Response
      */
-    public function destroy(productsList $productsList)
+    public function destroy(Shipping $shipping)
     {
         //
     }

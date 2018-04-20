@@ -52,15 +52,13 @@
             <div class="col-sm-12 col-md-6">
                 <p>{{$item->prod_desc}}</p>
                 <p>Price: {{$item->prod_price}}</p>
-                <p>Tax: {{$item->tax}}0</p>
-                <p>Total: {{$item->prod_price + $item->tax}}</p>
-                <a href="/products/checkout/{{ $item->id }}" class="btn btn-secondary btn-lg btn-block">Add to Cart</a>
+                <a href="/products/{{ $item->id }}" class="btn btn-secondary btn-lg btn-block">Add to Cart</a>
                 <a href="/cart" class="btn btn-outline-danger btn-sm float-sm-right back">Back</a>
 
             </div>
 
             <div class="col-sm-12 col-md-6">
-                <img class='card-img-top' src="/{{$item->prod_image}}" alt="{{$item->prod_name}}">
+                <img class='card-img-top' src="{{$item->prod_image}}" alt="{{$item->prod_name}}">
             </div>
 
         </div>

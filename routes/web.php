@@ -20,16 +20,15 @@ Route::get('/cozy', function () {
     return view('cozy');
 });
 
+
 Route::get('/cart', 'ProductsListController@index');
 Route::get('/cart/{item}', 'ProductsListController@show');
-Route::get('/product/{cart}', 'ProductsListController@show');
+Route::get('/products/{cart}', 'ProductsListController@showCart');
+Route::get('/thanks/{thanks}', 'ProductsListController@thanksPage');
 
-// Route::get('/cart/{item}', function($id){
-//     // $item = DB::table('products_lists')->find($id);
-//     // return view('products.show', compact('item'));
-// });
+Route::post('/products', 'ShippingController@store');
+
 
 Auth::routes();
 
-// Route::get('/products', 'ProductsListController@index');
 
