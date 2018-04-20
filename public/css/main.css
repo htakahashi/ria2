@@ -187,6 +187,26 @@ body {
   .wrapper .container {
     margin: auto; }
 
+.back {
+  margin: 10px 0;
+  padding: 5px 10px; }
+
+.items .card {
+  width: 200px;
+  float: left;
+  padding: 15px;
+  margin: 10px; }
+  .items .card h5 {
+    font-size: 12px; }
+  .items .card .cart-img-top {
+    width: 100%;
+    overflow: hidden; }
+
+.products::after {
+  content: "";
+  display: block;
+  clear: both; }
+
 ul li a {
   padding: 1em;
   color: white;
@@ -668,7 +688,7 @@ form input.submit:hover {
     background-image: none; }
     #header nav {
       float: right;
-      width: 40%;
+      width: 45%;
       z-index: 200; }
       #header nav li:last-child {
         border-right: non; }
@@ -726,10 +746,11 @@ form input.submit:hover {
         border: none; }
 
   #header nav.myMenu {
-    width: 60%; }
+    width: 75%; }
     #header nav.myMenu ul {
       float: right;
-      text-align: right; }
+      text-align: right;
+      padding: 10px; }
       #header nav.myMenu ul li {
         float: left;
         text-align: right;

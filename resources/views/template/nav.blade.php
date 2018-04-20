@@ -1,11 +1,20 @@
 <nav  class="myMenu">
 		<ul class="primary-nav">
-		<li class="active">Home</li>
-		<li class="about">About</li>
-		<li>Contact Us</li>	
+		<li class="active"><a href="/cozy">Home</a></li>
+		<li class="about"><a>About</a></li>
+		<li><a>Contact Us</a></li>	
 
-		<li class="last">Patterns		</li>
-			
+		<li class=""><a href="/cart"> Patterns	</a></li>
+		@if (Route::has('login'))
+              
+                    @auth
+                       <li> <a href="{{ url('/home') }}">Home</a></li>
+                    @else
+					<li><a href="{{ route('login') }}">Login</a></li>
+					<li class="last"><a href="{{ route('register') }}">Register</a></li>
+                    @endauth
+               
+            @endif
 		<button class="nav-button">Toggle Navigation</button>
 		</ul>
 			

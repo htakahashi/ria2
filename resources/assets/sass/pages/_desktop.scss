@@ -134,7 +134,7 @@ body{
     	float: right;
 		//position: absolute;
 		//right: -30px; 
-		width: 40%;
+		width: 45%;
 		z-index: 200;
 		//margin-bottom: 3.5em;
 		li:last-child{
@@ -229,11 +229,12 @@ body{
 }// #header
 	
 	#header nav.myMenu{
-		width: 60%;
+		width: 75%;
 		
 		ul{
 			float: right;
 			text-align: right;
+			padding: 10px;
 			li{
 				float: left;
 				text-align: right;
