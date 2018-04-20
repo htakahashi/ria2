@@ -5,139 +5,78 @@
   <div id="main">
     <div class="inner">
       <header>
-        <h1>This is Phantom, a free, fully responsive site<br />
-        template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-        <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+        <h1>Phantom Clothing inc.</h1>
+        <p>Find fresh looks in all of your favorite styles at Phantom Clothing! From dress to impress to lounge around the house.</p>
       </header>
       <section class="tiles">
         <article class="style1">
           <span class="image">
-            <img src="images/pic01.jpg" alt="" />
+            <img src="images/blueDress.jpg" alt="Blue dress" />
           </span>
           <a href="generic.html">
-            <h2>Magna</h2>
+            <h2>Blue Dress</h2>
             <div class="content">
+              <h4>$36.99</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
             </div>
           </a>
         </article>
         <article class="style2">
           <span class="image">
-            <img src="images/pic02.jpg" alt="" />
+            <img src="images/jeansW.jpg" alt="Women's jeans" />
           </span>
           <a href="generic.html">
-            <h2>Lorem</h2>
+            <h2>Women's Jeans</h2>
             <div class="content">
+              <h4>$36.99</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
             </div>
           </a>
         </article>
         <article class="style3">
           <span class="image">
-            <img src="images/pic03.jpg" alt="" />
+            <img src="images/blouse.jpg" alt="Blouse" />
           </span>
           <a href="generic.html">
-            <h2>Feugiat</h2>
+            <h2>Blouse</h2>
             <div class="content">
+              <h4>$39.00</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
             </div>
           </a>
         </article>
         <article class="style4">
           <span class="image">
-            <img src="images/pic04.jpg" alt="" />
+            <img src="images/suit.jpeg" alt="Suit" />
           </span>
           <a href="generic.html">
-            <h2>Tempus</h2>
+            <h2>Suit</h2>
             <div class="content">
+              <h4>$595.00</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
             </div>
           </a>
         </article>
         <article class="style5">
           <span class="image">
-            <img src="images/pic05.jpg" alt="" />
+            <img src="images/jeansM.jpeg" alt="Men's jeans" />
           </span>
           <a href="generic.html">
-            <h2>Aliquam</h2>
+            <h2>Men's Jeans</h2>
             <div class="content">
+              <h4>$69.50</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
             </div>
           </a>
         </article>
         <article class="style6">
           <span class="image">
-            <img src="images/pic06.jpg" alt="" />
+            <img src="images/shirt.jpeg" alt="Shirt" />
           </span>
           <a href="generic.html">
-            <h2>Veroeros</h2>
+            <h2>Shirt</h2>
             <div class="content">
-              <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-            </div>
-          </a>
-        </article>
-        <article class="style2">
-          <span class="image">
-            <img src="images/pic07.jpg" alt="" />
-          </span>
-          <a href="generic.html">
-            <h2>Ipsum</h2>
-            <div class="content">
-              <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-            </div>
-          </a>
-        </article>
-        <article class="style3">
-          <span class="image">
-            <img src="images/pic08.jpg" alt="" />
-          </span>
-          <a href="generic.html">
-            <h2>Dolor</h2>
-            <div class="content">
-              <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-            </div>
-          </a>
-        </article>
-        <article class="style1">
-          <span class="image">
-            <img src="images/pic09.jpg" alt="" />
-          </span>
-          <a href="generic.html">
-            <h2>Nullam</h2>
-            <div class="content">
-              <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-            </div>
-          </a>
-        </article>
-        <article class="style5">
-          <span class="image">
-            <img src="images/pic10.jpg" alt="" />
-          </span>
-          <a href="generic.html">
-            <h2>Ultricies</h2>
-            <div class="content">
-              <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-            </div>
-          </a>
-        </article>
-        <article class="style6">
-          <span class="image">
-            <img src="images/pic11.jpg" alt="" />
-          </span>
-          <a href="generic.html">
-            <h2>Dictum</h2>
-            <div class="content">
-              <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-            </div>
-          </a>
-        </article>
-        <article class="style4">
-          <span class="image">
-            <img src="images/pic12.jpg" alt="" />
-          </span>
-          <a href="generic.html">
-            <h2>Pretium</h2>
-            <div class="content">
+              <h4>$14.99</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
             </div>
           </a>

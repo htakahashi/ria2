@@ -47,6 +47,9 @@
 				> li {
 					padding: 0;
 					border-top: solid 1px transparentize(_palette(bg), 0.85);
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
 
 					a {
 						display: block;
