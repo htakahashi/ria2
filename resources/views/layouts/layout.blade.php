@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Phantom by HTML5 UP</title>
+		<title>Phantom Clothing Inc.</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -50,7 +50,7 @@
 						<ul class="navbar-nav ml-auto">
 							@if (Route::has('login'))
 								@auth
-									<li class="nav-item dropdown"><a class="dropdown-item" href="/"
+									<li><a href="/"
 										 onclick="event.preventDefault();
 																	 document.getElementById('logout-form').submit();">
 											{{ __('Logout') }}

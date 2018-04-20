@@ -18,6 +18,7 @@
             <div class="content">
               <h4>$36.99</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+              <div class="button special" href="#">Buy Now</div>
             </div>
           </a>
         </article>
@@ -30,6 +31,7 @@
             <div class="content">
               <h4>$36.99</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+              <div class="button special" href="#">Buy Now</div>
             </div>
           </a>
         </article>
@@ -42,6 +44,7 @@
             <div class="content">
               <h4>$39.00</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+              <div class="button special" href="#">Buy Now</div>
             </div>
           </a>
         </article>
@@ -54,6 +57,7 @@
             <div class="content">
               <h4>$595.00</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+              <div class="button special" href="#">Buy Now</div>
             </div>
           </a>
         </article>
@@ -66,6 +70,7 @@
             <div class="content">
               <h4>$69.50</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+              <div class="button special" href="#">Buy Now</div>
             </div>
           </a>
         </article>
@@ -78,6 +83,7 @@
             <div class="content">
               <h4>$14.99</h4>
               <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+              <div class="button special" href="#">Buy Now</div>
             </div>
           </a>
         </article>
