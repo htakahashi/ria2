@@ -39,6 +39,15 @@
                             </div>
                         </div>
 
+                        <div class="form-group row radio-flex">
+                          <div>
+                            <input id="admin" name="role" type="radio" value="admin"><label for="admin">Admin</label>
+                          </div>
+                          <div>
+                            <input id="customer" name="role" type="radio" value="customer" checked="checked"><label for="customer">Customer</label>
+                          </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 

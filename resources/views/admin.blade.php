@@ -14,10 +14,7 @@
                         </div>
                     @endif
 
-                    <p>
-                      Hello Customer!
-                    </p>
-                    <a class="button" href="/">Shop</a>
+                    Hello Admin!
                 </div>
             </div>
         </div>

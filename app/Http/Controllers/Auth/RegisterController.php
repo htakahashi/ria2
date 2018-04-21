@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use App\Role;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -24,12 +26,16 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
+    public function authenticated(Request $request)
+   {
+     // Logic that determines where to send the user
+     if(Auth::user()->roles[0]->name == 'admin'){
+       return redirect('/admin');
+     }
+     if(Auth::user()->roles[0]->name == 'customer'){
+       return redirect('/home');
+     }
+   }
 
     /**
      * Create a new controller instance.
@@ -69,9 +75,18 @@ class RegisterController extends Controller
         'email'    => $data['email'],
         'password' => bcrypt($data['password']),
       ]);
-      $user
-         ->roles()
-         ->attach(Role::where('name', 'customer')->first());
-      return $user;
+      $radio = Input::get('role');
+         if($radio == 'admin'){
+           $user
+              ->roles()
+              ->attach(Role::where('name', 'admin')->first());
+           return $user;
+         }
+         else{
+           $user
+              ->roles()
+              ->attach(Role::where('name', 'customer')->first());
+           return $user;
+      }
     }
 }

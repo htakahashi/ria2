@@ -64,10 +64,7 @@
 											<a href="{{ route('register') }}">Register</a></li>
 										@endauth
 							@endif
-							<li><a href="/">Home</a></li>
-							<li><a href="/generic">Ipsum veroeros</a></li>
-							<li><a href="/generic">Tempus etiam</a></li>
-							<li><a href="/generic">Consequat dolor</a></li>
+							<li><a href="/">Shop</a></li>
 							<li><a href="/elements">Elements</a></li>
 						</ul>
 					</nav>
