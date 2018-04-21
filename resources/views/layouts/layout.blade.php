@@ -50,6 +50,9 @@
 						<ul class="navbar-nav ml-auto">
 							@if (Route::has('login'))
 								@auth
+									<li>
+										Welcome, {{ Auth::user()->name }}
+									</li>
 									<li><a href="/"
 										 onclick="event.preventDefault();
 																	 document.getElementById('logout-form').submit();">

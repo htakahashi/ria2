@@ -23,10 +23,9 @@ Route::get('/elements', function () {
     return view('elements');
 });
 
-Route::get('/admin', function()
-{
-    return view('admin');
-});
+Route::get('/admin', 'AdminController@index');
+
+Route::get('/items/{item}', 'ItemsController@show');
 
 Auth::routes();
 
