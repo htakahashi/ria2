@@ -76,7 +76,6 @@
 		display: block;
 		font-size: 0.9em;
 		font-weight: _font(weight-bold);
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
 	}
 
 	input[type="text"],
@@ -131,7 +130,6 @@
 		}
 	}
 
-	input[type="text"],
 	input[type="password"],
 	input[type="email"],
 	select {

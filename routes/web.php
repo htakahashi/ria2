@@ -23,9 +23,12 @@ Route::get('/elements', function () {
     return view('elements');
 });
 
-Route::get('/admin', 'AdminController@index');
+Route::get('/admin', 'AdminController@show');
 
 Route::get('/items/{item}', 'ItemsController@show');
+Route::post('/items/{item}', 'ItemsController@store');
+
+Route::get('/thanks/{item}', 'ThanksController@show');
 
 Auth::routes();
 

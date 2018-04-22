@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Purchase;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -21,8 +23,9 @@ class AdminController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
+  public function show()
   {
-      return view('admin');
+      $purchases = DB::table('purchases')->get();
+      return view('admin', ['purchases' => $purchases]);
   }
 }
