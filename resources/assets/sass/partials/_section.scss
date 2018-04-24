@@ -1,0 +1,42 @@
+.icon-section {
+	background-color: #eee;
+	padding: 1em .5em .5em .5em;
+
+	.section-box-3 {
+		text-align: center;
+		color: #343434;
+
+		.section-box-icon{
+			font-size: 2.2em; margin-bottom: 10px;
+			color: $secondaryColor;
+		}
+	}
+}
+
+.quote-section {
+	margin-bottom: 2em;
+	padding-top: 3em;
+	height: 200px;
+	position: relative;
+
+	h3 {
+		margin-bottom: 1em;
+	}
+	.quote-icon{
+		font-size: 4em;
+		position: absolute;
+		top: 0;
+		left: 10%;
+		color: $primaryColor;
+	}
+	blockquote {
+		width: 60%;
+		margin-left: 20%;
+		.fa-quote-left {
+			color: $secondaryColor;
+		}
+		.fa-quote-right {
+			color: $secondaryColor;
+		}
+	}
+}

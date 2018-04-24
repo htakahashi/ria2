@@ -1,0 +1,40 @@
+a.details-btn {
+	text-decoration: none;
+	color: $thirdColor;
+	border: 1px solid $thirdColor;
+	padding: .25em;
+	@include border-radius(7px);
+	transition: all .3s ease;
+	&:hover {
+		background-color: $thirdColor;
+		color: $whiteColor;
+	}
+}
+
+a.cart-btn {
+	text-decoration: none;
+	color: $primaryColor;
+	border: 1px solid $secondaryColor;
+	padding: .25em;
+	@include border-radius(7px);
+	transition: all .3s ease;
+	&:hover {
+		background-color: $secondaryColor;
+		color: $whiteColor;
+	}
+}
+
+a.back-btn {
+	color: $thirdColor;
+	&:hover {
+		color: $secondaryColor;
+	}
+}
+
+span.all-btn a {
+	text-decoration: none;
+	color: $thirdColor;
+	&:hover {
+		color: $secondaryColor;
+	}
+}

@@ -1,0 +1,53 @@
+figure.sliderContainer {
+	width: 100%;
+	margin: -10px auto 30px auto;
+	display: block;
+	height: 100%;
+	.mySlider {
+		width: 100%;
+		max-height: 800px;
+		overflow: hidden;
+		margin: 0 auto;
+		img {width: 100%;}
+	}
+}
+
+.sliderText {
+	position: absolute;
+	top: 150px;
+	right: 4%;
+
+	h1 {
+		font-size: 1.8em;
+		color: #fff;
+		@include text-shadow(2px,2px,5px,rgba(0,0,0,.75));
+	}
+}
+
+
+@include breakpoint(tablet) {
+
+	figure.sliderContainer {
+		.mySlider {
+			max-height: 650px;
+		}
+	}
+
+	.sliderText {
+		top: 50%;
+		left: 35%;
+		h1 {font-size: 3em;}
+	}
+
+}//end of tablet
+
+
+
+@include breakpoint(desktop) {
+
+	.sliderText {
+		top: 65%;
+		left: 50%;
+	}
+
+}//end of tablet

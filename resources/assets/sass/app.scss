@@ -1,0 +1,19 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//Global specific
+@import 'site/variables';
+
+//Site Specific
+@import 'site/global';
+@import 'site/nav';
+@import 'site/footer';
+
+//Page Specific
+@import 'partials/buttons';
+@import 'partials/slider';
+@import 'partials/products';
+@import 'partials/section';
+@import 'partials/admin';
+
+
