@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Item;
 use App\Purchase;
+use Session;
+use Redirect;
 use Illuminate\Http\Request;
 
 class ItemsController extends Controller
@@ -57,8 +59,7 @@ class ItemsController extends Controller
         $purchase->save(); // Save to the database
         return redirect('/thanks/'.$item->id);
       } elseif (request('card') == '4111 1111 1111 1111') {
-        $purchase->error = "Your card has declined";
-        return back();
+        Session::flash('error', "Your card has declined");
       }
 
       return back();

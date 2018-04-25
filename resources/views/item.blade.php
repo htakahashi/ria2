@@ -54,8 +54,8 @@
               </div>
 
               @php
-                if ( $purchase->error ) {
-                  return '{{ $purchase->error }}';
+                if ( Session::has('error') ) {
+                  echo '<div class="alert alert-info">'. Session::get("error") . '</div>';
                 }
               @endphp
 
