@@ -15,15 +15,16 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user-id');
-            $table->string('first-name');
-            $table->string('last-name');
+            //$table->unsignedInteger('user-id');
+            $table->string('firstName');
+            $table->string('lastName');
             $table->string('address');
             $table->string('city');
             $table->string('state');
-            $table->integer('zip-code');
-            $table->integer('credit-card');
-            $table->tinyInteger('product');
+            $table->integer('zipcode');
+            $table->double('creditCard');
+            $table->string('product');
+            $table->decimal('productPrice', 3, 2);
             $table->timestamps();
 
             // $table-foreign('user-id')->references('id')->on('users');

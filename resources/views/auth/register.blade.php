@@ -61,11 +61,17 @@
                             </div>
                         </div>
 
-                        <div class="form-group row radio">
-                          <label><input type="radio" name="optradio"> Admin</label>
-                        </div>
-                        <div class="form-group row radio">
-                          <label><input type="radio" name="optradio"> Customer</label>
+                        <div class="input-group-text">
+                            <label for="position" class="col-md-4 col-form-label">Check to become admin</label>
+                            <div class="">
+                                <input id="position" name="userType" value="admin" type="radio">
+                            </div>
+
+                            <label for="position" class="col-md-4 col-form-label">Check to become a customer</label>
+                            <div class="">
+                                <input id="position" name="userType" value="customer" type="radio" checked >
+                            </div>
+                            
                         </div>
 
                         <div class="form-group row mb-0">

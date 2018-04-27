@@ -14,9 +14,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -35,7 +34,30 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $orders = new \App\Post;
+
+        // Create a new post
+        $orders->firstName = request('first-name');
+        $orders->lastName = request('last-name');
+        $orders->address = request('address');
+        $orders->city = request('city');
+        $orders->state = request('state');
+        $orders->zipcode = request('zip-code');
+        $orders->creditCard = request('credit-card');
+        $orders->product = request('product');
+        $orders->productPrice = request('productPrice');
+
+        if ($orders->creditCard != 5105105105105100){
+            echo "Credit Card is invalid, please try again";
+            dd($orders->creditCard); 
+        }
+            
+        else{
+            // Save message to database
+            $orders->save();
+            // Redirect to thank you page.
+            return redirect('/thankyou');
+        }
     }
 
     /**

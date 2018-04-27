@@ -19,12 +19,20 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
-Route::get('/checkout', function () {
-    return view('checkout');
+Route::get('/redCheckout', function () {
+    return view('redCheckout');
 });
 
-Route::get('/customer', function () {
-    return view('customer');
+Route::get('/yellowCheckout', function () {
+    return view('yellowCheckout');
+});
+
+Route::get('/orangeCheckout', function () {
+    return view('orangeCheckout');
+});
+
+Route::get('/pinkCheckout', function () {
+    return view('pinkCheckout');
 });
 
 Route::get('/products', function () {
@@ -35,20 +43,19 @@ Route::get('/thankyou', function () {
     return view('thankyou');
 });
 
+
+
+Route::post('/orders', 'PostController@store');
+
+
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/orders', 'HomeController@orders')->name('home');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/orders', 'adminController@orders');
+Route::get('/customer', 'customerController@customer');
 
 
 // resources
-
 Route::resource('users', 'UserController');
 Route::resource('roles', 'RoleController');
 Route::resource('posts', 'PostController');
 Route::resource('permissions','PermissionController');
-

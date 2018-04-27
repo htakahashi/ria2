@@ -20,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role',
     ];
 
     /**
@@ -33,5 +33,23 @@ class User extends Authenticatable
     ];
 
 
-    $admin = User::role('admin')->get(); 
+    public function setPasswordAttribute($password)
+    {   
+        $this->attributes['password'] = bcrypt($password);
+    }
+
+    // $role = Role::create(['name' => 'administrator']);
+    // $permission = Permission::create(['name' => 'view orders']);
+
+    // function storeNewUser(){
+    //     if () {
+
+    //          $user = new User;
+    //          $user-> 
+    //     }
+    //     }
+    //     else{
+    //         // Assign new user to be customer.
+    //     }
 }
+   

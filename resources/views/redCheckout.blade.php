@@ -6,7 +6,7 @@
 
  <div class="grid-container">
   <div class="grid-item">
-  	<form class="checkout-form" action="/postorder" method="POST">
+    <form class="checkout-form" action="/orders" method="POST">
         @csrf
      <div class="form-item">
         <label>First Name</label>
@@ -43,7 +43,8 @@
         <input class="form-input" type="number" name="credit-card">
      </div>
      
-     <input class="form-input" type="hidden" name="product" value="4">
+    <input class="form-input" type="hidden" name="product" value="red">
+    <input class="form-input" type="hidden" name="productPrice" value=".5">
 
      <div class="form-item">
         <input class="form-input submit" type="submit" name="" value="Submit">
