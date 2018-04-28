@@ -17,7 +17,9 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
-Route::get('/thanks/{id}', 'ProductsController@thanks');
+Route::get('/thanks', function () {
+    return view('thanks');
+});
 
 Route::get('/register', function () {
     return view('register');
@@ -36,6 +38,4 @@ Route::get('/assignRole', 'CreateRolesPermissionsController@assignRole');
 
 Route::get('/products', 'ProductsController@show');
 Route::get('/products/{id}', 'ProductsController@showOrderForm');
-Route::post('/submitOrder/{id}', 'OrdersController@store');
-
-
+Route::post('/submitOrder', 'OrdersController@store');
