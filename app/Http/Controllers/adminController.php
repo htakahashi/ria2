@@ -15,13 +15,6 @@ class adminController extends Controller
     }
 
     public function orders(){
-    	if (Auth::user() && Auth::user()->role == 0) {
-    		$orders = Post::all();
-        
-        	return view('/orders', compact('orders'));
-    	}
-    	else{
-    	 return view('customer');
-    	}    	
+       return view('admin');
     }
 }
