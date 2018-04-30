@@ -34,6 +34,16 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate(request(), [
+            'first-name' => 'required',
+            'last-name' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip-code' => 'required|min:5|max:9',
+            'credit-card' => 'required|min:16|max:16'
+        ]);
+
         $orders = new \App\Post;
 
         // Create a new post
@@ -48,8 +58,9 @@ class PostController extends Controller
         $orders->productPrice = request('productPrice');
 
         if ($orders->creditCard != 5105105105105100){
-            echo "Credit Card is invalid, please try again";
-            dd($orders->creditCard); 
+            return redirect()->back()->withErrors(['Credit Card is invalid, please fill out your payment information and try again']);
+            // echo "Credit Card is invalid, please try again";
+            // dd($orders->creditCard); 
         }
             
         else{

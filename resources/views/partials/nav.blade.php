@@ -8,14 +8,9 @@
     @endif
     <a href="/products">Products</a>
     <a href="/thankyou">Thankyou</a>
-    <a href="/admin">Admin</a>
     @if (Auth::user())
-        {{-- expr --}}
-  
         @if (Auth::user()->role == 0)
             <a href="/orders">Orders</a>
         @endif
-
     @endif
-
 </div>
