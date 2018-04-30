@@ -11,10 +11,11 @@ class adminController extends Controller
 {
     public function __construct(){
     	$this->middleware('admin');
+      $this->middleware('auth:api');
     }
 
     public function orders(){
-    	if (Auth::user()->role == 0) {
+    	if (Auth::user() && Auth::user()->role == 0) {
     		$orders = Post::all();
         
         	return view('/orders', compact('orders'));
