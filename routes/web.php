@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,32 +9,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'ProductsController@show');
-
-Route::get('/checkout', function () {
-    return view('checkout');
+Route::get('/', function () {
+    return view('welcome');
 });
-
-Route::get('/thanks/{id}', 'ProductsController@thanks');
-
-Route::get('/register', function () {
-    return view('register');
+Route::get('/item1', function() {
+    session()->put('item', '1');
+    session()->put('price', '34.99');
+    return view('item1');
+   });
+Route::get('/item2', function() {
+    session()->put('item', '2');
+    session()->put('price', '24.99');
+    return view('item2');
+   });
+Route::get('/item3', function() {
+    session()->put('item', '3');
+    session()->put('price', '100+');
+    return view('item3');
+   });
+Route::get('/thanks', function() {
+   return view('thanks');
 });
-
-Route::get('/admin', 'AdminController@index');
-
-Route::get('/customer', 'CustomerController@index');
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-Route::get('/createAdminRole', 'CreateRolesPermissionsController@createAdminRole');
-Route::get('/createCustomerRole', 'CreateRolesPermissionsController@createCustomerRole');
-Route::get('/assignRole', 'CreateRolesPermissionsController@assignRole');
-
-Route::get('/products', 'ProductsController@show');
-Route::get('/products/{id}', 'ProductsController@showOrderForm');
-Route::post('/submitOrder/{id}', 'OrdersController@store');
-
-
+Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/order', 'OrderController@store');
