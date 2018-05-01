@@ -11,6 +11,32 @@
 |
 */
 
+// Shop
 Route::get('/', function () {
-    return view('welcome');
+    return view('shop');
 });
+
+// Generic
+Route::get('generic', function () {
+    return view('generic');
+});
+
+// Elements
+Route::get('elements', function () {
+    return view('elements');
+});
+
+// Admin
+Route::get('admin', function(){
+	return view('admin');
+})->middleware('auth','admin');
+
+// Customer
+Route::get('customer', function(){
+	return view('customer');
+})->middleware('auth','customer');
+ 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

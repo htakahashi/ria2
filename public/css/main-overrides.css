@@ -1,0 +1,16 @@
+/* Phantom HTML5_UP Template Style Overrides */
+
+h1 {
+	margin: 0 0 .5em 0;
+}
+.row-login {
+	margin-top:    10px;
+	margin-bottom: 10px;
+}
+.card-login {
+	margin-bottom: 40px;
+}
+.form-group {
+	display: flex;
+	align-items: flex-end;
+}
