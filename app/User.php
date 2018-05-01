@@ -32,12 +32,12 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-
-    public function setPasswordAttribute($password)
-    {   
-        $this->attributes['password'] = bcrypt($password);
-    }
-
+    //
+    // public function setPasswordAttribute($password)
+    // {   
+    //     $this->attributes['password'] = bcrypt($password);
+    // }
+    //
     // $role = Role::create(['name' => 'administrator']);
     // $permission = Permission::create(['name' => 'view orders']);
 

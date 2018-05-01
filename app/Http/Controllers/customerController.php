@@ -13,11 +13,6 @@ class customerController extends Controller
     }
 
     public function customer(){
-    	if (Auth::user()->role == 1) {
-    		return view('customer');
-    	}
-    	else{
-    	 return view('orders');
-    	}
+       return view('customer');
     }
 }
