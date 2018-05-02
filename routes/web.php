@@ -10,12 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/* Page displays */
 
-Route::get('/', function () {
-    return view('welcome');
-    
+Route::get('/', 'HomeController@index');
+
+Route::get('products', function () {
+   return view('products');
 });
 
-Route::get('comments', 'CommentController@create');
+Route::get('/thanks', 'ThanksController@index');
+Route::get('/admin', 'AdminController@index');
+Route::get('/checkout', 'CheckoutController@index');
+Route::get('customer', function () {
+    return view('customer');
+});
+Route::get('/product', 'ProductController@index');
 
-Route::post('jibs', 'CommentController@comment');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

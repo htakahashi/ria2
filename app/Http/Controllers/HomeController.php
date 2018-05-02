@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Permissions;
+
 
 class HomeController extends Controller
 {
@@ -14,6 +16,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->permissions = new Permissions();
     }
 
     /**
@@ -23,6 +26,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = $this->permissions->get_user_data();
+        $user = $user[0];
+        if ($user->permission == "View Sales")
+        {
+            return redirect('admin');
+        }
+
+        return view('home', ['user' => $user]);
     }
+
+
 }

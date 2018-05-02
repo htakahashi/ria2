@@ -14,9 +14,18 @@
                         </div>
                     @endif
 
-                           Hello Customer!
 
 
+
+
+                        <?php
+
+                        if(!empty($user->permission) && $user->permission == 'Buy Stuff')
+                        {
+                            echo '<div class="title m-b-md">Hello Customer!</div><a href="product/"><button class="btn btn-success">Let\'s go shopping!</button></a>';
+                        }
+
+                        ?>
 
             </div>
         </div>
