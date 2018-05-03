@@ -1,9 +1,31 @@
 <?php return array (
+  'cartalyst/stripe-laravel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Cartalyst\\Stripe\\Laravel\\StripeServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Stripe' => 'Cartalyst\\Stripe\\Laravel\\Facades\\Stripe',
+    ),
+  ),
   'fideloper/proxy' => 
   array (
     'providers' => 
     array (
       0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
+    ),
+  ),
+  'gloudemans/shoppingcart' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Cart' => 'Gloudemans\\Shoppingcart\\Facades\\Cart',
     ),
   ),
   'laravel/tinker' => 
@@ -13,18 +35,16 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
-  'nunomaduro/collision' => 
+  'laravelcollective/html' => 
   array (
     'providers' => 
     array (
-      0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+      0 => 'Collective\\Html\\HtmlServiceProvider',
     ),
-  ),
-  'spatie/laravel-permission' => 
-  array (
-    'providers' => 
+    'aliases' => 
     array (
-      0 => 'Spatie\\Permission\\PermissionServiceProvider',
+      'Form' => 'Collective\\Html\\FormFacade',
+      'Html' => 'Collective\\Html\\HtmlFacade',
     ),
   ),
 );
